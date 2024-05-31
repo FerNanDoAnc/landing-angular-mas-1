@@ -1,0 +1,81 @@
+.php_page_que_titulo {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+  color: #1A36A8;
+}
+
+.php_page_func_titulo {
+  color: #1A36A8;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+}
+
+.php_page_que_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.php_page_func_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.php_page_que_es {
+  width: 1225px;
+  padding: 60px 45px 0 45px;
+}
+
+.php_page_funcion {
+  width: 1225px;
+  padding: 30px 45px 30px 45px;
+}
+
+.php_page_titulo_carr_text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+  color: #1A36A8;
+}
+
+.php_page_titulo_carr {
+  width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 45px;
+  margin-top: 2em;
+}
+
+.php_page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.php_page_bg {
+  position: relative;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.tecnologias_carrusel {
+  width: 1225px;
+  margin-bottom: 7em;
+}
+.php_page_card.php_card_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

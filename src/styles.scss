@@ -2,4 +2,33 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
+}
+
+.a_descuento_img_titular {
+  position: relative;
+  display: flex;
+}
+
+.a_descuento_img_titular::after,
+.a_descuento_img_titular::before {
+  content: "";
+  display: block;
+  width: 537px;
+  height: 2px;
+  background: #1A36A8;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.a_descuento_img_titular::after {
+  margin-left: 25px;
+}
+
+.a_descuento_img_titular::before {
+  margin-right: 25px;
+}
+
+.a_descuento_img_titular.a_desc_supe {
+  margin-bottom: 2em;
 }

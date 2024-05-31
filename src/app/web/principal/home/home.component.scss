@@ -1,0 +1,353 @@
+.a_cyber {
+  background: #1A36A8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 811px;
+}
+
+.a_cyber_info {
+  width: 45%;
+}
+
+.a_conenido_1 {
+  display: flex;
+  width: 1440px;
+  align-items: center;
+  justify-content: center;
+}
+
+.a_cyber_es_hora.bg-warning {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px
+}
+
+.a_cyber_cyber {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67.2px;
+}
+
+.a_cyber_en {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.a_cyber_mas_uno {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67.2px;
+  margin-bottom: -1px;
+}
+
+.a_cyber_en_grupo {
+  display: flex;
+  align-items: center;
+}
+
+.a_cyber_completa {
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 28.8px;
+  color: #C12A21;
+  margin-bottom: 0;
+}
+
+.a_cyber_titulo_form {
+  width: 563px;
+  margin-bottom: 20px;
+}
+
+.a_cyber_my_form {
+  background: #fff;
+  border-radius: 32px;
+  width: 643px;
+  height: 599px;
+}
+
+.a_cyber_tyc {
+  color: #000000;
+  width: 563px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  text-align: center;
+}
+
+.a_cyber_tyc span {
+  color: #C12A21;
+  font-weight: 700;
+}
+
+.a_cyber_fecha {
+  font-size: 24px;
+  line-height: 28.8px;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+.a_cyber_grupo_es_hora {
+  display: flex;
+  align-items: center;
+}
+
+.a_cyber_es_hora {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+  margin-bottom: -5px;
+}
+
+.a_cyber_grupo_uno {
+  margin-left: 1em;
+}
+
+.a_cyber_form_titulares {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+//
+.a_cyber_cuerpo_form {
+  width: 563px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a_label_form {
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 19.2px;
+  color: #B7B1A9
+}
+
+.a_cyber_form_campos {
+  width: 100%;
+}
+
+.a_my_btn_guardar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.a_check_mis_terminos {
+  margin-top: 3em;
+}
+
+.a_label_form_check {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  color: #988F86;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.a_terminos_link,
+.a_datos_link {
+  color: #1A36A8;
+  font-weight: 700;
+}
+
+.a_check_mis_datos {
+  margin-bottom: 1em;
+}
+
+.btn.a_btn_guardar {
+  width: 240px;
+  height: 56px;
+  border-radius: 6px;
+  background: #E3E3E3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input#checkTerminos,
+input#checkDatos {
+  cursor: pointer;
+}
+
+.a_captcha {
+  transform: translateY(1em);
+}
+
+.a_form_tyc input {
+  margin-top: 2px;
+}
+
+//
+
+.a_contenido_2 {
+  background: #fff;
+  height: 1800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.a_descuento_cont_preg {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.a_descuento {
+  width: 1286px;
+  height: 848px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.a_descuento_subtitulo {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: center;
+  color: #595959;
+}
+
+.a_descuento_pregunta {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: center;
+  color: #1A36A8;
+}
+
+.a_descuento_pasos {
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.a_desc_paso_text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: center;
+  color: #1A36A8;
+}
+
+.a_descuento_subtitulo span {
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 28.8px;
+  text-align: center;
+  color: #C12A21;
+}
+
+
+.a_desc_card_body {
+  width: 362px;
+  height: 397px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 26px;
+}
+
+.a_desc_titulo_2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: center;
+  color: #1A36A8;
+}
+
+.a_desc_paso_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: center;
+  color: #595959;
+}
+
+//
+.tecnologias {
+  height: 860px;
+  width: 100%;
+  max-width: 1640px;
+}
+
+.tecnologias_carrusel {
+  height: 598px;
+}
+
+swiper-container {
+  height: 100%;
+}
+
+.tec_card.tec_card_1,
+.tec_card.tec_card_2,
+.tec_card.tec_card_3 {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.tec_card_info {
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tec_card_titulo {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: #C12A21;
+  margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.tec_card_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  color: #2E2E2E;
+  width: 492px;
+  margin-bottom: 2em;
+}
+
+.tec_card_btn_ver {
+  background: #1A36A8;
+  color: #fff;
+  width: 240px;
+  height: 56px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+}
+
+.tecnologias_las_mejores {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: #1A36A8;
+}
+
+.tecnologias_titulares {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+}
