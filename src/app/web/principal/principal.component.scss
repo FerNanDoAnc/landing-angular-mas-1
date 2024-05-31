@@ -1,0 +1,175 @@
+.a_cyber {
+  background: #1A36A8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 811px;
+}
+
+.a_cyber_info {
+  width: 45%;
+}
+
+.a_content2 {
+  background: #fff;
+  height: 3203px;
+}
+
+.a_conenido_1 {
+  display: flex;
+  width: 1440px;
+  align-items: center;
+  justify-content: center;
+}
+
+.a_cyber_es_hora.bg-warning {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px
+}
+
+.a_cyber_cyber {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67.2px;
+}
+
+.a_cyber_en {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.a_cyber_mas_uno {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67.2px;
+  margin-bottom: -1px;
+}
+
+.a_cyber_en_grupo {
+  display: flex;
+  align-items: center;
+}
+
+.a_cyber_completa {
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 28.8px;
+  color: #C12A21;
+}
+
+.a_cyber_my_form {
+  background: #fff;
+  border-radius: 32px;
+  width: 643px;
+  height: 599px;
+}
+
+.a_cyber_tyc {
+  color: #000000;
+  width: 563px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  text-align: center;
+}
+
+.a_cyber_tyc span {
+  color: #C12A21;
+  font-weight: 700;
+}
+
+.a_cyber_fecha {
+  font-size: 24px;
+  line-height: 28.8px;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+.a_cyber_grupo_es_hora {
+  display: flex;
+  align-items: center;
+}
+
+.a_cyber_es_hora {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+  margin-bottom: -5px;
+}
+
+.a_cyber_grupo_uno {
+  margin-left: 1em;
+}
+
+.a_cyber_form_titulares {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+//
+.a_cyber_cuerpo_form {
+  width: 563px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a_label_form {
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 19.2px;
+  color: #B7B1A9
+}
+
+.a_cyber_form_campos{
+  width: 100% ;
+}
+
+.a_my_btn_guardar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.a_check_mis_terminos{
+  margin-top: 1em;
+}
+
+.a_label_form_check{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  color: #988F86;
+  margin-bottom: 0;
+}
+.a_terminos_link,
+.a_datos_link{
+  color: #1A36A8;
+  font-weight: 700;
+}
+.a_check_mis_datos{
+  margin-bottom: 1em;
+}
+
+.btn.a_btn_guardar {
+  width: 240px;
+  height: 56px;
+  border-radius: 6px;
+  background: #E3E3E3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input#checkTerminos,
+input#checkDatos {
+  cursor: pointer;
+}

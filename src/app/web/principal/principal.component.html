@@ -1,0 +1,120 @@
+<div class="a_principal">
+  <app-header></app-header>
+
+  <div class="a_contenido">
+    <div class="a_cyber">
+      <div class="a_conenido_1">
+
+        <div class="a_cyber_info">
+          <div class="a_cyber_grupo_es_hora">
+            <img src="assets/icons/ico-es-hora.png" alt="Logo" width="104" height="40">
+            <p class="a_cyber_es_hora">ES HORA DE</p>
+          </div>
+          <p class="a_cyber_cyber">CYBER DAYS</p>
+          <div class="a_cyber_en_grupo">
+            <p class="a_cyber_en">EN</p>
+            <div class="a_cyber_grupo_uno">
+              <p class="a_cyber_mas_uno">Más uno</p>
+              <img src="assets/icons/subrayado-rojo.png" alt="Logo" width="255" height="24">
+            </div>
+          </div>
+          <p class="a_cyber_fecha">Del <b>28</b> al <b>30</b> de marzo</p>
+          <img src="assets/icons/oferta.png" alt="Logo" width="551" height="368">
+        </div>
+
+        <div class="a_cyber_form">
+          <div class="a_cyber_my_form">
+            <div class="a_cyber_form_titulares">
+              <p class="a_cyber_completa">Completa tus datos</p>
+              <img src="assets/icons/logo.png" alt="Logo" width="69" height="58">
+
+              <div class="a_cyber_cuerpo_form">
+                <form novalidate [formGroup]='formLanding' class="a_cyber_form_campos">
+
+                  <div class="form-row row ">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4" class="a_label_form">Nombres *</label>
+                      <input formControlName="Nombre" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4" class="a_label_form">Apellidos *</label>
+                      <input formControlName="Apellido" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-row row ">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4" class="a_label_form">Teléfono celular *</label>
+                      <input formControlName="Celular" type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4" class="a_label_form">Correo electrónico *</label>
+                      <input formControlName="Correo" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-row row ">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4" class="a_label_form">Tus favoritos</label>
+                      <select class="form-control" formControlName="IdFavorito" (change)="misFavoritos($event)">
+                        <option value="0">-Seleccionar-</option>
+                        <option *ngFor="let item of comboFavoritos" [value]="item.Id">{{ item.name }}</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <re-captcha (resolved)="resolved($event)" siteKey="YOUR_SITE_KEY">
+                      </re-captcha>
+                    </div>
+                  </div>
+
+                  <div class="form-row row a_check_mis_terminos">
+                    <div class="form-group col-md-12">
+                      <div class="form-check a_form_tyc">
+                        <input class="form-check-input" type="checkbox" id="checkTerminos" formControlName="Terminos">
+                        <label class="form-check  a_label_form_check" for="checkTerminos">
+                          Acepto los <a href="#" class="a_terminos_link">Acepto los Términos y políticas de
+                            privacidad</a>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row row a_check_mis_datos">
+                    <div class="form-group col-md-12">
+                      <div class="form-check a_form_tyc">
+                        <input class="form-check-input" type="checkbox" id="checkDatos" formControlName="Terminos">
+                        <label class="form-check  a_label_form_check" for="checkDatos">
+                          Acepto el <a href="#" class="a_datos_link">Uso de datos personales</a>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="a_my_btn_guardar">
+                    <button type="button" class="btn a_btn_guardar" (click)="guardar()" [disabled]="!formLanding.valid || !captchaResolved">
+                      Registrarme
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <p class="a_cyber_tyc">
+                Aprovecha las mejores ofertas y descuentos en pollo, pavo, cerdo, congelados, embutidos
+                <span>y mucho más</span>. No te pierdas de nada estos Cyberdays registrándote y obteniendo grandes
+                descuentos exclusivos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="a_content2">
+
+    </div>
+  </div>
+
+
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
