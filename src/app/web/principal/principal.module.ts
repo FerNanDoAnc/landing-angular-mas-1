@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { PrincipalRoutingModule } from './principal-routing.module';
@@ -34,6 +34,9 @@ import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
   ],
   providers: [
 
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class PrincipalModule { }

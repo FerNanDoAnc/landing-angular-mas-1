@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '', component: PrincipalComponent,
     children:[
-      {path:'php',component:PhpPageComponent}
+      {path:'php-page',component:PhpPageComponent}
     ]
   },
 ];

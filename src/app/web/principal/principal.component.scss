@@ -11,11 +11,6 @@
   width: 45%;
 }
 
-.a_content2 {
-  background: #fff;
-  height: 3203px;
-}
-
 .a_conenido_1 {
   display: flex;
   width: 1440px;
@@ -58,6 +53,12 @@
   font-weight: 750;
   line-height: 28.8px;
   color: #C12A21;
+  margin-bottom: 0;
+}
+
+.a_cyber_titulo_form {
+  width: 563px;
+  margin-bottom: 20px;
 }
 
 .a_cyber_my_form {
@@ -127,8 +128,8 @@
   color: #B7B1A9
 }
 
-.a_cyber_form_campos{
-  width: 100% ;
+.a_cyber_form_campos {
+  width: 100%;
 }
 
 .a_my_btn_guardar {
@@ -138,23 +139,26 @@
   margin-bottom: 1em;
 }
 
-.a_check_mis_terminos{
-  margin-top: 1em;
+.a_check_mis_terminos {
+  margin-top: 3em;
 }
 
-.a_label_form_check{
+.a_label_form_check {
   font-size: 14px;
   font-weight: 300;
   line-height: 16.8px;
   color: #988F86;
   margin-bottom: 0;
+  padding: 0;
 }
+
 .a_terminos_link,
-.a_datos_link{
+.a_datos_link {
   color: #1A36A8;
   font-weight: 700;
 }
-.a_check_mis_datos{
+
+.a_check_mis_datos {
   margin-bottom: 1em;
 }
 
@@ -172,4 +176,205 @@
 input#checkTerminos,
 input#checkDatos {
   cursor: pointer;
+}
+
+.a_captcha {
+  transform: translateY(1em);
+}
+
+.a_form_tyc input {
+  margin-top: 2px;
+}
+
+//
+
+.a_contenido_2 {
+  background: #fff;
+  height: 1800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.a_descuento_cont_preg {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.a_descuento {
+  width: 1286px;
+  height: 848px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.a_descuento_subtitulo {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: center;
+  color: #595959;
+}
+
+.a_descuento_pregunta {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: center;
+  color: #1A36A8;
+}
+
+.a_descuento_pasos {
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.a_desc_paso_text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: center;
+  color: #1A36A8;
+}
+
+.a_descuento_subtitulo span {
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 28.8px;
+  text-align: center;
+  color: #C12A21;
+}
+
+.a_descuento_img_titular {
+  position: relative;
+  display: flex;
+}
+
+.a_descuento_img_titular::after,
+.a_descuento_img_titular::before {
+  content: "";
+  display: block;
+  width: 537px;
+  height: 2px;
+  background: #1A36A8;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.a_descuento_img_titular::after {
+  margin-left: 25px;
+}
+
+.a_descuento_img_titular::before {
+  margin-right: 25px;
+}
+
+.a_descuento_img_titular.a_desc_supe {
+  margin-bottom: 2em;
+}
+
+.a_desc_card_body {
+  width: 362px;
+  height: 397px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 26px;
+}
+
+.a_desc_titulo_2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: center;
+  color: #1A36A8;
+}
+
+.a_desc_paso_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: center;
+  color: #595959;
+}
+
+//
+.tecnologias {
+  height: 860px;
+  width: 100%;
+  max-width: 1640px;
+}
+
+.tecnologias_carrusel {
+  height: 598px;
+}
+
+swiper-container {
+  height: 100%;
+}
+
+.tec_card.tec_card_1,
+.tec_card.tec_card_2,
+.tec_card.tec_card_3 {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.tec_card_info {
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tec_card_titulo {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: #C12A21;
+  margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.tec_card_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  color: #2E2E2E;
+  width: 492px;
+  margin-bottom: 2em;
+}
+
+.tec_card_btn_ver {
+  background: #1A36A8;
+  color: #fff;
+  width: 240px;
+  height: 56px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+}
+
+.tecnologias_las_mejores {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: #1A36A8;
+}
+
+.tecnologias_titulares {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
 }
