@@ -17,7 +17,7 @@
           </div>
         </div>
         <p class="a_cyber_fecha">Del <b>28</b> al <b>30</b> de marzo</p>
-        <img src="assets/icons/oferta.png" alt="Logo" width="551" height="368">
+        <img src="assets/icons/oferta.png" class="a_oferta" alt="Logo" width="551" height="368">
       </div>
 
       <div class="a_cyber_form">
@@ -36,21 +36,33 @@
                   <div class="form-group col-md-6">
                     <label for="inputEmail4" class="a_label_form">Nombres *</label>
                     <input formControlName="Nombre" type="text" class="form-control">
+                    <small *ngIf="formLanding.get('Nombre')?.invalid && (formLanding.get('Nombre')?.dirty || formLanding.get('Nombre')?.touched)" class="text-danger">
+                      Nombres es obligatorio.
+                    </small>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputPassword4" class="a_label_form">Apellidos *</label>
                     <input formControlName="Apellido" type="text" class="form-control">
+                    <small *ngIf="formLanding.get('Apellido')?.invalid && (formLanding.get('Apellido')?.dirty || formLanding.get('Apellido')?.touched)" class="text-danger">
+                      Apellidos es obligatorio.
+                    </small>
                   </div>
                 </div>
 
                 <div class="form-row row ">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4" class="a_label_form">Teléfono celular *</label>
-                    <input formControlName="Celular" type="text" class="form-control">
+                    <input formControlName="Celular" type="number" class="form-control">
+                    <small *ngIf="formLanding.get('Celular')?.invalid && (formLanding.get('Celular')?.dirty || formLanding.get('Celular')?.touched)" class="text-danger">
+                      Celular es obligatorio y debe contener solo 9 dígitos numéricos.
+                    </small>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputPassword4" class="a_label_form">Correo electrónico *</label>
                     <input formControlName="Correo" type="text" class="form-control">
+                    <small *ngIf="formLanding.get('Correo')?.invalid && (formLanding.get('Correo')?.dirty || formLanding.get('Correo')?.touched)" class="text-danger">
+                      Correo electrónico es obligatorio y debe ser una dirección de correo válida.
+                    </small>
                   </div>
                 </div>
 
@@ -61,6 +73,9 @@
                       <option value="0">-Seleccionar-</option>
                       <option *ngFor="let item of comboFavoritos" [value]="item.Id">{{ item.name }}</option>
                     </select>
+                    <small *ngIf="formLanding.get('IdFavorito')?.invalid && (formLanding.get('IdFavorito')?.dirty || formLanding.get('IdFavorito')?.touched)" class="text-danger">
+                      Debes seleccionar un favorito.
+                    </small>
                   </div>
                   <div class="form-group col-md-6 a_captcha">
                     <re-captcha (resolved)="resolved($event)" siteKey="6Leiv-0pAAAAAKr3gb9o4wSV-qFI2BnjY57mzR9y">
@@ -76,6 +91,11 @@
                         Acepto los <a href="#" class="a_terminos_link">Acepto los Términos y políticas de
                           privacidad</a>
                       </label>
+                      <div *ngIf="formLanding.get('Terminos')?.invalid && (formLanding.get('Terminos')?.dirty || formLanding.get('Terminos')?.touched)">
+                        <small class="text-danger">
+                          Debes aceptar los términos y condiciones.
+                        </small>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -83,17 +103,23 @@
                 <div class="form-row row a_check_mis_datos">
                   <div class="form-group col-md-12">
                     <div class="form-check a_form_tyc">
-                      <input class="form-check-input" type="checkbox" id="checkDatos" formControlName="Terminos">
+                      <input class="form-check-input" type="checkbox" id="checkDatos" formControlName="Datos">
                       <label class="form-check  a_label_form_check" for="checkDatos">
                         Acepto el <a href="#" class="a_datos_link">Uso de datos personales</a>
                       </label>
+                      <div *ngIf="formLanding.get('Datos')?.invalid && (formLanding.get('Datos')?.dirty || formLanding.get('Datos')?.touched)">
+                        <small class="text-danger">
+                          Debes aceptar el uso de datos personales.
+                        </small>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="a_my_btn_guardar">
                   <button type="button" class="btn a_btn_guardar" (click)="guardar()"
-                    [disabled]="!formLanding.valid || !captchaResolved">
+                    [disabled]="!formLanding.valid"
+                    >
                     Registrarme
                   </button>
                 </div>
@@ -127,7 +153,7 @@
         <div class="a_descuento_card a_desc_card_1">
           <p class="a_desc_paso_text">Paso 1</p>
           <div class="a_desc_card_body">
-            <img src="assets/icons/desc-paso-1.png" alt="Ico caras" width="244" height="244">
+            <img src="assets/icons/desc-paso-1.png" class="a_ico_pasos_img" width="244" height="244">
             <p class="a_desc_titulo_2">Regístrate</p>
             <p class="a_desc_paso_desc">Completa el formulario con tus datos personales y acepta los términos.</p>
           </div>
@@ -135,7 +161,7 @@
         <div class="a_descuento_card a_desc_card_2">
           <p class="a_desc_paso_text">Paso 2</p>
           <div class="a_desc_card_body">
-            <img src="assets/icons/desc-paso-2.png" alt="Ico caras" width="244" height="244">
+            <img src="assets/icons/desc-paso-2.png" class="a_ico_pasos_img" width="244" height="244">
             <p class="a_desc_titulo_2">Recibe un cupón</p>
             <p class="a_desc_paso_desc">Recibirás un correo electrónico donde podrás ver el cupón de descuento.</p>
           </div>
@@ -143,7 +169,7 @@
         <div class="a_descuento_card a_desc_card_3">
           <p class="a_desc_paso_text">Paso 3</p>
           <div class="a_desc_card_body">
-            <img src="assets/icons/desc-paso-3.png" alt="Ico caras" width="244" height="244">
+            <img src="assets/icons/desc-paso-3.png" class="a_ico_pasos_img" width="244" height="244">
             <p class="a_desc_titulo_2">Empieza a ahorrar</p>
             <p class="a_desc_paso_desc">
               ¡Y listo! Podrás usarlo del 28 al 30 de Marzo por compras en nuestra tienda online.
@@ -171,7 +197,7 @@
             <div class="tec_card tec_card_1">
               <div class="tec_card_info">
                 <div class="tec_card_contenido">
-                  <img src="assets/icons/ico-star.png" alt="Logo" width="64" height="64">
+                  <img src="assets/icons/ico-star.png" class="a_star_img" width="64" height="64">
                   <p class="tec_card_titulo">PHP</p>
                   <p class="tec_card_desc">PHP es un lenguaje de código abierto muy popular especialmente adecuado
                     para el desarrollo web y que puede ser incrustado en HTML. echo "¡Hola, soy un script de PHP!"; ?>
@@ -179,38 +205,39 @@
                   <button class="tec_card_btn_ver" (click)="verCategoria(1)">Ver categoría</button>
                 </div>
               </div>
-              <img src="assets/icons/image-php.png" alt="Logo" width="640" height="598">
+              <img src="assets/icons/image-php.png" class="logo_tecnologia" width="640" height="598">
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="tec_card tec_card_2">
               <div class="tec_card_info">
                 <div class="tec_card_contenido">
-                  <img src="assets/icons/ico-star.png" alt="Logo" width="64" height="64">
+                  <img src="assets/icons/ico-star.png" class="a_star_img" width="64" height="64">
                   <p class="tec_card_titulo">PYTHON</p>
                   <p class="tec_card_desc">Python es un lenguaje de programación ampliamente utilizado en las aplicaciones web, el desarrollo de software, la ciencia de datos y el machine learning (ML).
                   </p>
                   <button class="tec_card_btn_ver" (click)="verCategoria(2)">Ver categoría</button>
                 </div>
               </div>
-              <img src="assets/icons/image-python.png" alt="Logo" width="640" height="598">
+              <img src="assets/icons/image-python.png" class="logo_tecnologia" width="640" height="598">
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="tec_card tec_card_3">
               <div class="tec_card_info">
                 <div class="tec_card_contenido">
-                  <img src="assets/icons/ico-star.png" alt="Logo" width="64" height="64">
+                  <img src="assets/icons/ico-star.png" class="a_star_img" width="64" height="64">
                   <p class="tec_card_titulo">DISEÑO UX/UI</p>
                   <p class="tec_card_desc">Aquí es donde entra la UX (experiencia de usuario) y la UI (interfaz de usuario), que tienen la función de que el usuario encuentre lo que busca en el menor tiempo posible y además tenga una buena experiencia al visitar la web.
                   </p>
                   <button class="tec_card_btn_ver" (click)="verCategoria(3)">Ver categoría</button>
                 </div>
               </div>
-              <img src="assets/icons/image-ui.png" alt="Logo" width="640" height="598">
+              <img src="assets/icons/image-ui.png" class="logo_tecnologia"width="640" height="598">
             </div>
           </swiper-slide>
         </swiper-container>
+        <!-- <div class="swiper-pagination"></div> -->
       </div>
     </div>
 

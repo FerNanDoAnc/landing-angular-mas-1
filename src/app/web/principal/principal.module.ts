@@ -9,6 +9,8 @@ import { HeaderComponent } from '../shared/header/header.component';
 import { PrincipalComponent } from './principal.component';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { HomeComponent } from './home/home.component';
+import { PythonPageComponent } from './python-page/python-page.component';
+import { UiPageComponent } from './ui-page/ui-page.component';
 
 @NgModule({
   imports: [
@@ -26,14 +28,18 @@ import { HomeComponent } from './home/home.component';
     PhpPageComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    PythonPageComponent,
+    UiPageComponent
   ],
   declarations: [
     PrincipalComponent,
     PhpPageComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    PythonPageComponent,
+    UiPageComponent
   ],
   providers: [
 

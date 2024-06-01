@@ -32,3 +32,187 @@ body {
 .a_descuento_img_titular.a_desc_supe {
   margin-bottom: 2em;
 }
+
+@media (max-width: 600px) {
+
+  .a_descuento_img_titular::after,
+  .a_descuento_img_titular::before {
+    width: 90px;
+  }
+}
+
+// ------------------------------------------------ PAGES STILOS ----------------------------------------------------
+.php_page_que_titulo {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+  color: #1A36A8;
+}
+
+.php_page_func_titulo {
+  color: #1A36A8;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+}
+
+.php_page_que_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.php_page_func_desc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.php_page_que_es {
+  width: 1225px;
+  padding: 60px 45px 0 45px;
+}
+
+.php_page_funcion {
+  width: 1225px;
+  padding: 30px 45px 30px 45px;
+}
+
+.php_page_titulo_carr_text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+  color: #1A36A8;
+}
+
+.php_page_titulo_carr {
+  width: auto;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 45px;
+  margin-top: 2em;
+}
+
+.php_page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.php_page_bg {
+  position: relative;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.tecnologias_carrusel {
+  width: 1225px;
+  padding-bottom: 2em;
+}
+
+.php_page_card.php_card_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0em;
+  height: 465px;
+  z-index: 1;
+  position: relative;
+}
+
+//
+.swiper-button-prev {
+  transform: translate(7em, -18em);
+  z-index: 1;
+  position: relative;
+  border: none;
+  background: none;
+}
+
+button.swiper-button-next {
+  transform: translate(64em, -18em);
+  z-index: 1;
+  position: relative;
+  border: none;
+  background: none;
+}
+
+swiper-container::part(bullet) {
+  background-color: #909090;
+  width: 10px;
+  height: 10px;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: #1A36A8;
+  width: 10px;
+  height: 10px;
+}
+
+swiper-container::part(pagination) {
+  transform: translate(0em, 0em);
+  z-index: 2;
+  position: relative
+}
+
+@media (max-width: 600px) {
+
+  .php_page_funcion,
+  .php_page_que_es {
+    width: auto;
+  }
+
+  .php_page_que_desc,
+  .php_page_func_desc {
+    font-size: 14px;
+  }
+
+
+  .php_page_titulo_carr {
+    width: auto;
+  }
+
+  .tecnologias_carrusel {
+    width: 100%;
+  }
+
+  img.a_gal_tec {
+    width: 50%;
+    height: 60%;
+  }
+
+  //
+  .swiper-button-prev {
+    transform: translate(1em, -18em);
+    z-index: 1;
+    position: relative;
+    border: none;
+    background: none;
+  }
+
+  button.swiper-button-next {
+    transform: translate(15em, -18em);
+    z-index: 1;
+    position: relative;
+    border: none;
+    background: none;
+  }
+
+  .php_page_bg {
+    height: 180px;
+  }
+}
+
+// ---------------------------------------- END PAGES STILOS ------------------------------------------

@@ -1,4 +1,4 @@
-.a_footer{
+.a_footer {
   width: 100%;
   height: 448px;
   background: #1A36A8;
@@ -87,4 +87,15 @@
 
 .a_footer_1 {
   margin-top: -3em;
+}
+
+@media (max-width: 600px) {
+
+  .a_footer_content {
+    flex-direction: column;
+  }
+
+  .a_footer {
+    height: 780px;
+  }
 }

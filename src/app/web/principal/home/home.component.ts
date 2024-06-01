@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
-import { register } from 'swiper/element/bundle';
+import { SwiperContainer, register } from 'swiper/element/bundle';
+import { SwiperOptions } from 'swiper/types';
 register();
 
 @Component({
@@ -11,7 +13,10 @@ register();
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+
+  swiperElement: SwiperContainer | null = null;
+  private isValidEmail = /\S+@\S+\.\S+/;
   formLanding: FormGroup = new FormGroup({});
   captchaResolved = false;
 
@@ -24,15 +29,21 @@ export class HomeComponent {
   constructor(private fb: FormBuilder, private route: Router) {}
 
   ngOnInit() {
-    this.formLanding = this.fb.group({
+    this.crearFormulario();
+    this.configMySwiper();
+  }
+
+  crearFormulario():FormGroup{
+    return this.formLanding = this.fb.group({
       Nombre: ['', Validators.required],
       Apellido: ['', Validators.required],
-      Celular: ['', Validators.required],
-      Correo: ['', [Validators.required, Validators.email]],
+      Celular: ['', [Validators.required, Validators.max(999999999),Validators.min(100000000)]],
+      Correo: ['', [Validators.required, Validators.email, Validators.pattern(this.isValidEmail)]],
       IdFavorito: [0],
       Terminos: [false, Validators.requiredTrue],
-      recaptcha: ['', Validators.required],
-    });
+      Datos: [false, Validators.requiredTrue],
+      recaptcha: [''],
+    })
   }
 
   resolved(captchaResponse: any) {
@@ -43,9 +54,23 @@ export class HomeComponent {
   guardar() {
     if (this.formLanding.valid) {
       // Lógica de envío del formulario
-      console.log('Formulario válido:', this.formLanding.value);
+      Swal.fire({
+        title: 'Registro exitoso',
+        text: 'Se ha registrado correctamente al CyberDay 2024',
+        icon: 'info',
+        confirmButtonText: 'Aceptar'
+      }).then(() => {
+        this.formLanding.reset();
+      });
+
+
     } else {
-      console.log('Formulario inválido');
+      Swal.fire({
+        title: 'Error',
+        text: 'Debe completar todos los campos del formulario',
+        icon: 'error',
+        confirmButtonText: 'Aceptar'
+      });
     }
   }
 
@@ -66,5 +91,35 @@ export class HomeComponent {
         this.route.navigate(['/ui-page']);
         break;
     }
+  }
+
+  configMySwiper(){
+    const swiperElementConstructor = document.querySelector('swiper-container');
+    const swiperOptions:SwiperOptions = {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+      },
+    };
+    Object.assign(swiperElementConstructor!, swiperOptions);
+    this.swiperElement = swiperElementConstructor as SwiperContainer;
+    this.swiperElement.swiper.init();
+    this.swiperElement.swiper.autoplay.start();
+    this.swiperElement.swiper.navigation.update();
+    // navigation buttons
+    const nextButton = document.querySelector('.swiper-button-next');
+    const prevButton = document.querySelector('.swiper-button-prev');
+    nextButton?.addEventListener('click', () => {
+      this.swiperElement!.swiper.slideNext();
+    });
+    prevButton?.addEventListener('click', () => {
+      this.swiperElement!.swiper.slidePrev();
+    });
   }
 }

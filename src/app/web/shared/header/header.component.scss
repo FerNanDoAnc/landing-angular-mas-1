@@ -5,3 +5,9 @@
   justify-content: center;
   height: 118px;
 }
+
+@media (max-width: 600px) {
+  .a_header {
+    width: 100%;
+}
+}

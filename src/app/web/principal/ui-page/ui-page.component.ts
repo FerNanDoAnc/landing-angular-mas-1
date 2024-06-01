@@ -4,15 +4,11 @@ import { SwiperOptions } from 'swiper/types';
 register();
 
 @Component({
-  selector: 'app-php-page',
-  // standalone: true,
-  // imports: [],
-  templateUrl: './php-page.component.html',
-  styleUrl: './php-page.component.scss',
-  encapsulation: ViewEncapsulation.None,
+  selector: 'app-ui-page',
+  templateUrl: './ui-page.component.html',
+  styleUrl: './ui-page.component.scss'
 })
-export class PhpPageComponent implements OnInit{
-
+export class UiPageComponent implements OnInit{
   swiperElement: SwiperContainer | null = null;
 
   ngOnInit() {
@@ -33,7 +29,7 @@ export class PhpPageComponent implements OnInit{
     Object.assign(swiperElementConstructor!, swiperOptions);
     this.swiperElement = swiperElementConstructor as SwiperContainer;
     this.swiperElement.swiper.init();
-    // this.swiperElement.swiper.autoplay.start();
+    this.swiperElement.swiper.autoplay.start();
     this.swiperElement.swiper.navigation.update();
     // navigation buttons
     const nextButton = document.querySelector('.swiper-button-next');
@@ -45,4 +41,5 @@ export class PhpPageComponent implements OnInit{
       this.swiperElement!.swiper.slidePrev();
     });
   }
+
 }
