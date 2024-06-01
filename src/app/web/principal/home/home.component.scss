@@ -280,12 +280,7 @@ input#checkDatos {
 //
 .tecnologias {
   height: 860px;
-  width: 100%;
   max-width: 1640px;
-}
-
-.tecnologias_carrusel {
-  height: 598px;
 }
 
 swiper-container {
@@ -406,6 +401,84 @@ small.text-danger {
   height: 16px;
   display: flex;
   overflow-y: hidden;
+}
+
+@media (max-width: 1024px) {
+  .a_conenido_1 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .a_cyber {
+    height: 1500px;
+  }
+
+  .a_cyber_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5em;
+  }
+
+  .a_cyber_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .a_descuento {
+    width: 100%;
+  }
+
+  .a_contenido_2{
+    height: 1550px;
+  }
+
+  .tecnologias {
+    width: 100%;
+    height: 660px;
+  }
+
+  .a_ico_pasos_img {
+    width: auto !important;
+    height: 200px !important;
+  }
+
+  .a_desc_card_body {
+    width: 275px;
+  }
+
+  .tecnologias_carrusel {
+    width: 100%;
+  }
+
+  .logo_tecnologia {
+    width: 50%;
+    height: auto;
+  }
+
+  .tec_card_info {
+    width: 50%;
+  }
+
+  .tec_card.tec_card_1,
+  .tec_card.tec_card_2,
+  .tec_card.tec_card_3 {
+    width: 100%;
+  }
+
+  .tec_card_contenido {
+    width: 100%;
+    padding: 0 18px;
+  }
+
+  .tec_card_desc {
+    width: auto;
+  }
 }
 
 //
@@ -556,6 +629,10 @@ small.text-danger {
   .a_star_img {
     width: 30px !important;
     height: 30px !important;
+  }
+
+  .tecnologias {
+    width: 100%;
   }
 
 }

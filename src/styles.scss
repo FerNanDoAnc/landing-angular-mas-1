@@ -33,6 +33,14 @@ body {
   margin-bottom: 2em;
 }
 
+@media (max-width: 1024px) {
+
+  .a_descuento_img_titular::after,
+  .a_descuento_img_titular::before {
+    max-width: 260px;
+  }
+}
+
 @media (max-width: 600px) {
 
   .a_descuento_img_titular::after,
@@ -165,6 +173,50 @@ swiper-container::part(pagination) {
   transform: translate(0em, 0em);
   z-index: 2;
   position: relative
+}
+
+@media (max-width: 1024px) {
+
+  .php_page_funcion,
+  .php_page_que_es {
+    width: auto;
+  }
+
+
+  .php_page_titulo_carr {
+    width: auto;
+  }
+
+  .tecnologias_carrusel {
+    width: 100%;
+  }
+
+  img.a_gal_tec {
+    width: 60%;
+    height: 70%;
+  }
+
+  //
+  .swiper-button-prev {
+    transform: translate(5em, -18em);
+    z-index: 1;
+    position: relative;
+    border: none;
+    background: none;
+  }
+
+  button.swiper-button-next {
+    transform: translate(39em, -18em);
+    z-index: 1;
+    position: relative;
+    border: none;
+    background: none;
+  }
+
+  .php_page_bg {
+    height: 300px;
+  }
+
 }
 
 @media (max-width: 600px) {
